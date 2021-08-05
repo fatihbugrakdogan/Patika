@@ -1,0 +1,24 @@
+"""soru1"""
+l=[[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+def duz(x):
+    new=[]
+    for i in x:
+        if type(i)!=type([]):
+            new.append(i)
+        else:
+            new.extend(duz(i))
+    return new
+duz(l)
+"""soru2"""
+ liste=[[1, 2], [3, 4], [5, 6, 7]]
+def sırala(x):
+    yeniliste=[] 
+    for y in x:
+         if list(y)==list(reversed(y)):
+             yeniliste.append(list(y))
+         else:
+             yeniliste.append(list(reversed(y)))
+    yeniliste.sort(reverse=True)
+    return yeniliste
+
+sırala(liste)
